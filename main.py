@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
+import requests
 
 app = FastAPI()
 
@@ -15,6 +16,23 @@ def add(num1: int, num2: int):
 
     total = num1 + num2
     return {"total": total}
+
+@app.get("/query/{date}")
+async def query(date: str):
+    """Query weather by location and date"""
+
+    url = "https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/"
+
+    querystring = {"query": date}
+
+    headers = {
+        "X-RapidAPI-Key": "155edcf844msh7d2f8265bf24668p17f256jsn999e77a74d46",
+        "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return {"result": response.text}
 
 
 if __name__ == "__main__":
