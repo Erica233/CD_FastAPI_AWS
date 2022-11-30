@@ -18,7 +18,7 @@ def add(num1: int, num2: int):
     return {"total": total}
     
 @app.get("/year/{num}")
-async def year(year: str):
+async def query_year(year: str):
     """ """
 
     url = "https://numbersapi.p.rapidapi.com/" + year + "/year"
