@@ -22,4 +22,4 @@ Go to https://wtcda3sbpz.us-east-1.awsapprunner.com, and append '/query_year/{ye
 
 I used two public APIs on RapidAPI.
 1. [COVID-19 Statistics](https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/)
-2. [hNumbers](https://rapidapi.com/divad12/api/numbers-1/)
+2. [Numbers](https://rapidapi.com/divad12/api/numbers-1/)

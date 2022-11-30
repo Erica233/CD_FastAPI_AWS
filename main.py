@@ -34,7 +34,7 @@ async def query_year(year: str):
 
 @app.get("/query_covid/{date}")
 async def query(date: str):
-    """Query covid-19 statistics by location and date"""
+    """Query covid-19 statistics by date (yyyy-mm-dd)"""
 
     url = "https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/"
 
