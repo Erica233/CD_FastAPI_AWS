@@ -7,19 +7,17 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello visitor!"}
-
-
+    return {"message": "Hello visitor! \nYou can query: \n1. /query_year/{year}\n2. /query_covid/{date}"}
+    
 @app.get("/add/{num1}/{num2}")
 def add(num1: int, num2: int):
     """Add two numbers together"""
-
     total = num1 + num2
     return {"total": total}
     
 @app.get("/query_year/{year}")
 async def query_year(year: str):
-    """ """
+    """query interesting facts happened in a given year"""
 
     url = "https://numbersapi.p.rapidapi.com/" + year + "/year"
 
@@ -34,9 +32,9 @@ async def query_year(year: str):
 
     return {"result": response.text}
 
-@app.get("/query/{date}")
+@app.get("/query_covid/{date}")
 async def query(date: str):
-    """Query covid19 statistics by location and date"""
+    """Query covid-19 statistics by location and date"""
 
     url = "https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/"
 
