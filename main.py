@@ -17,7 +17,7 @@ def add(num1: int, num2: int):
     total = num1 + num2
     return {"total": total}
     
-@app.get("/year/{num}")
+@app.get("/query_year/{year}")
 async def query_year(year: str):
     """ """
 
