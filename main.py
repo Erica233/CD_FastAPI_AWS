@@ -20,7 +20,7 @@ def add(num1: int, num2: int):
 
 @app.get("/query/{date}")
 async def query(date: str):
-    """Query weather by location and date"""
+    """Query covid19 statistics by location and date"""
 
     url = "https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/"
 
