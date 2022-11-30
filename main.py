@@ -30,13 +30,13 @@ async def query(food: str):
         "X-RapidAPI-Host": "calorieninjas.p.rapidapi.com"
     }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
+    response = requests.request("GET", url, headers=headers, params=querystring, timeout=10)
 
     return {"result": response.text}
 
 
 @app.get("/query/{date}")
-async def query(date: str):
+async def query2(date: str):
     """Query covid19 statistics by location and date"""
 
     url = "https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/"
