@@ -4,7 +4,7 @@
 
 ## INTRODUCTION
 
-It is my 706 Project 4. I created Microservices in Fast API using AWS ECR and App Runner and pushed it onto my Github. It basically implements three APIs, one for introduction page, one for querying some interesting facts happened in a given year, and one for covid-19 statistics for the given date.
+It is my 706 Project 4. I created Microservices in Fast API using AWS ECR and App Runner and pushed it onto my Github. It basically implements three APIs, one for introduction page, one for querying some interesting facts happened in a given year, and one for querying covid-19 statistics for the given date.
 
 ## IMPLEMENTATION
 
